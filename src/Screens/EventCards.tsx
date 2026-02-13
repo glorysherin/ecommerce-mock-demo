@@ -47,13 +47,13 @@ export default function EventCardItem({ imageurl, startTime, endTime, title, loc
             </View>
 
 
-            {expanded && subEvents?.map((item) => (
+            {expanded && subEvents?.map((item, index) => (
                 <View style={style.subCard}>
-                        <View style={style.ContentSection}>
-                            <CardTitleText text={item.title} key={item.title}></CardTitleText>
-                            <Text>{item.location}</Text>
+                    <View style={style.ContentSection}>
+                        <CardTitleText text={item.title} key={index}></CardTitleText>
+                        <Text>{item.location}</Text>
 
-                        </View>
+                    </View>
                 </View>
             ))}
 
